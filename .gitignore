@@ -1,0 +1,15 @@
+node_modules
+.DS_Store
+dist
+.npmrc
+.cache
+.node_modules
+./node_modules
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-debug.log
+yarn.lock
