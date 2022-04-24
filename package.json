@@ -16,19 +16,17 @@
     "dist"
   ],
   "dependencies": {
-    "@zougt/some-loader-utils": "^1.4.2",
-    "cac": "^6.7.12",
-    "chalk": "^5.0.0",
-    "fs-extra": "^10.0.0",
+    "@zougt/some-loader-utils": "^1.4.3",
+    "fs-extra": "^10.1.0",
     "string-hash": "^1.1.3"
   },
   "devDependencies": {
-    "@babel/cli": "^7.12.10",
-    "@babel/core": "^7.12.10",
-    "@babel/preset-env": "^7.12.11",
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.9",
+    "@babel/preset-env": "^7.16.11",
     "cross-env": "^7.0.3",
-    "less": "^4.1.1",
-    "sass": "^1.32.8"
+    "sass": "^1.50.1",
+    "sass-loader": "^12.6.0"
   },
   "keywords": [
     "@pureadmin/theme",
