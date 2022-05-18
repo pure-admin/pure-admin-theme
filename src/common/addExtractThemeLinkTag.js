@@ -1,4 +1,4 @@
-import { addScopnameToHtmlClassname } from "@zougt/some-loader-utils";
+import { addScopnameToHtmlClassname } from "@zougt/some-loader-utils"
 
 export function addExtractThemeLinkTag({
   html,
@@ -8,8 +8,8 @@ export function addExtractThemeLinkTag({
   config,
 }) {
   // 向html中添加抽取的主题css文件的link标签，并在html标签中添加 calssName
-  let newHtml = html;
-  const tags = [];
+  let newHtml = html
+  const tags = []
   const {
     themeLinkTagInjectTo,
     extract,
@@ -18,23 +18,22 @@ export function addExtractThemeLinkTag({
     outputDir,
     defaultScopeName,
     customThemeCssFileName,
-  } = defaultOptions;
+  } = defaultOptions
 
   if (Array.isArray(allmultipleScopeVars) && allmultipleScopeVars.length) {
-    const scopeName = defaultScopeName || allmultipleScopeVars[0].scopeName;
+    const scopeName = defaultScopeName || allmultipleScopeVars[0].scopeName
 
     if (buildCommand !== "build" || !removeCssScopeName) {
-      newHtml = addScopnameToHtmlClassname(newHtml, scopeName);
+      newHtml = addScopnameToHtmlClassname(newHtml, scopeName)
     }
 
     if (buildCommand === "build" && extract && themeLinkTagId) {
       const filename =
         (typeof customThemeCssFileName === "function"
           ? customThemeCssFileName(scopeName)
-          : "") || scopeName;
-      const linkHref = `/${config.base || ""}/${
-        outputDir || config.build.assetsDir
-      }/${filename}.css`.replace(/\/+(?=\/)/g, "");
+          : "") || scopeName
+      const linkHref = `${config.base || ""}/${outputDir || config.build.assetsDir
+        }/${filename}.css`.replace(/\/+(?=\/)/g, "")
       const tag = {
         tag: "link",
         attrs: {
@@ -43,14 +42,14 @@ export function addExtractThemeLinkTag({
           id: themeLinkTagId,
         },
         injectTo: themeLinkTagInjectTo,
-      };
-      tags.push(tag);
+      }
+      tags.push(tag)
     }
   }
   return {
     html: newHtml,
     tags,
-  };
+  }
 }
 
-export default addExtractThemeLinkTag;
+export default addExtractThemeLinkTag
