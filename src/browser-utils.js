@@ -26,14 +26,14 @@ function rgbToHex(a, b, c) {
 }
 
 /** 加深颜色值 */
-function darken(color, level) {
+export function darken(color, level) {
   let rgbc = hexToRgb(color)
   for (let i = 0; i < 3; i++) rgbc[i] = Math.floor(rgbc[i] * (1 - level))
   return rgbToHex(rgbc[0], rgbc[1], rgbc[2])
 }
 
 /** 变浅颜色值 */
-function lighten(color, level) {
+export function lighten(color, level) {
   let rgbc = hexToRgb(color)
   for (let i = 0; i < 3; i++)
     rgbc[i] = Math.floor((255 - rgbc[i]) * level + rgbc[i])
