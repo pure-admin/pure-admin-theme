@@ -110,7 +110,7 @@ export default function themePreprocessorPlugin(options = {}) {
     "const setCustomTheme=function(options){window._setCustomTheme_=options;}"
 
   return {
-    name: "vite-plugin-theme-preprocessor",
+    name: "@pureadmin/theme",
     enforce: "pre",
     api: {
       getOptions() {
@@ -523,7 +523,7 @@ function themePreprocessorHmrPlugin() {
   return {
     // 插件顺序必须post
     enforce: "post",
-    name: "vite-plugin-theme-preprocessor-hmr",
+    name: "@pureadmin/theme-hmr",
     config(conf, { command }) {
       buildCommand = command
     },
@@ -533,7 +533,7 @@ function themePreprocessorHmrPlugin() {
     },
     buildStart() {
       // 获取依赖插件提供的 方法
-      const parentName = "vite-plugin-theme-preprocessor"
+      const parentName = "@pureadmin/theme"
       const parentPlugin = config.plugins.find(
         (plugin) => plugin.name === parentName
       )
