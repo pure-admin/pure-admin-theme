@@ -33,7 +33,7 @@ export function addExtractThemeLinkTag({
           ? customThemeCssFileName(scopeName)
           : "") || scopeName
       const linkHref = `${config.base || ""}/${outputDir || config.build.assetsDir
-        }/${filename}.css`.replace(/\/+(?=\/)/g, "")
+        }/${filename}.css`.replace(/([^:])\/\/+/g, "$1/")
       const tag = {
         tag: "link",
         attrs: {
