@@ -4,8 +4,8 @@
   "description": "pure admin theme plugin for vite",
   "license": "MIT",
   "author": "xiaoxian521",
-  "homepage": "https://github.com/pure-admin/pureadmin-theme",
-  "bugs": "https://github.com/pure-admin/pureadmin-theme/issues",
+  "homepage": "https://github.com/pure-admin/pure-admin-theme",
+  "bugs": "https://github.com/pure-admin/pure-admin-theme/issues",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
