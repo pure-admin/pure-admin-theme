@@ -7,7 +7,7 @@ import fsExtra from "fs-extra"
  * @param {*} { langs: ['scss','less'] }
  * @returns
  */
-export function resetStylePreprocessor(options = {}) {
+export const resetStylePreprocessor = (options = {}) => {
   if (!Array.isArray(options.langs) || !options.langs.length) {
     return Promise.resolve()
   }
@@ -60,4 +60,3 @@ export function resetStylePreprocessor(options = {}) {
   return Promise.resolve()
 }
 
-export default resetStylePreprocessor

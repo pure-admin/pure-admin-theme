@@ -1,7 +1,6 @@
 import { PluginOption } from "vite";
-export { PluginOption } from "vite";
 
-export interface multipleScopeVarsOptions {
+interface multipleScopeVarsOptions {
   /** 预设主题色的名称 */
   scopeName?: string;
   /** 变量文件内容不应该夹带样式代码，设定上只需存在变量 */
@@ -10,14 +9,14 @@ export interface multipleScopeVarsOptions {
   varsContent?: string;
 }
 
-export interface includeStyleWithColorsOptions {
+interface includeStyleWithColorsOptions {
   /** 颜色 */
   color?: string;
   /** 该颜色是否跟随主题色梯度变化，默认 `false` */
   inGradient?: boolean;
 }
 
-export interface Options {
+interface Options {
   scss: {
     /** 是否启用任意主题色模式，默认 `false` 不启用 */
     arbitraryMode?: boolean;
@@ -44,5 +43,12 @@ export interface Options {
   };
 }
 
-declare function themePreprocessorPlugin(rawOptions?: Options): PluginOption;
-export default themePreprocessorPlugin;
+declare const themePreprocessorPlugin: (rawOptions?: Options) => PluginOption;
+
+export {
+  themePreprocessorPlugin,
+  PluginOption,
+  multipleScopeVarsOptions,
+  includeStyleWithColorsOptions,
+  Options,
+};

@@ -32,7 +32,7 @@ let preCustomThemeOutputPath = ""
  * @returns {object}
  */
 
-export default function themePreprocessorPlugin(options = {}) {
+export const themePreprocessorPlugin = (options = {}) => {
   let config = {
     root: process.cwd(),
   }
@@ -479,7 +479,7 @@ export default function themePreprocessorPlugin(options = {}) {
  * @returns object
  */
 
-function themePreprocessorHmrPlugin() {
+export const themePreprocessorHmrPlugin = () => {
   let parentApi = null
   let cacheThemeStyleContent = ""
   let buildCommand = ""
@@ -590,10 +590,4 @@ function themePreprocessorHmrPlugin() {
       return Promise.resolve()
     },
   }
-}
-
-export {
-  themePreprocessorPlugin,
-  themePreprocessorHmrPlugin,
-  resetStylePreprocessor,
 }

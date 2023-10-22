@@ -1,12 +1,12 @@
 import { addScopnameToHtmlClassname } from "@zougt/some-loader-utils"
 
-export function addExtractThemeLinkTag({
+export const addExtractThemeLinkTag = ({
   html,
   defaultOptions,
   allmultipleScopeVars,
   buildCommand,
   config,
-}) {
+}) => {
   // 向html中添加抽取的主题css文件的link标签，并在html标签中添加 calssName
   let newHtml = html
   const tags = []
@@ -52,4 +52,3 @@ export function addExtractThemeLinkTag({
   }
 }
 
-export default addExtractThemeLinkTag

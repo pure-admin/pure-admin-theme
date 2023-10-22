@@ -1,8 +1,8 @@
-const MIN_BABEL_VERSION = 7;
+const MIN_BABEL_VERSION = 7
 
 module.exports = (api) => {
-  api.assertVersion(MIN_BABEL_VERSION);
-  api.cache(true);
+  api.assertVersion(MIN_BABEL_VERSION)
+  api.cache(true)
 
   return {
     presets: [
@@ -10,10 +10,10 @@ module.exports = (api) => {
         "@babel/preset-env",
         {
           targets: {
-            node: "12.0.0",
+            node: "18.18.2",
           },
         },
       ],
     ],
-  };
-};
+  }
+}

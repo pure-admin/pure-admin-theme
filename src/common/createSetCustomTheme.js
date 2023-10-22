@@ -5,7 +5,7 @@ import {
 
 // import pack from "../../package.json";
 
-export function createSetCustomTheme(options) {
+export const createSetCustomTheme = (options) => {
   const {
     styleTagId,
     defaultPrimaryColor,
@@ -34,4 +34,3 @@ export function createSetCustomTheme(options) {
   })
 }
 
-export default createSetCustomTheme
