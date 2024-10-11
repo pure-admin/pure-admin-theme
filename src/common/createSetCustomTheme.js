@@ -1,7 +1,7 @@
 import {
   createSetCustomThemeFile,
   getThemeStyleContent,
-} from "@zougt/some-loader-utils"
+} from "@pureadmin/theme-utils";
 
 // import pack from "../../package.json";
 

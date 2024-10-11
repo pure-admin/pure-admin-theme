@@ -1,4 +1,4 @@
-import { addScopnameToHtmlClassname } from "@zougt/some-loader-utils"
+import { addScopnameToHtmlClassname } from "@pureadmin/theme-utils";
 
 export const addExtractThemeLinkTag = ({
   html,

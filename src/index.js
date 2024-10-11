@@ -8,7 +8,7 @@ import {
   getCurrentPackRequirePath,
   getThemeStyleContent,
   removeThemeFiles,
-} from "@zougt/some-loader-utils"
+} from "@pureadmin/theme-utils";
 
 import pack from "../package.json"
 
@@ -278,16 +278,16 @@ export const themePreprocessorPlugin = (options = {}) => {
             fsExtra.writeFileSync(
               `${substitutePreprocessorDir}/${mainFile}`,
               `const nodePreprocessor = require("${originalDir}/${resolveName}/${mainFile}");
-                const { ${funName} } =  require("@zougt/some-loader-utils");
+                const { ${funName} } =  require("@pureadmin/theme-utils");
                 module.exports = ${funName}({
                   arbitraryMode:${defaultOptions.arbitraryMode},
                   includeStyleWithColors:${JSON.stringify(
-                defaultOptions.includeStyleWithColors
-              )},
+                    defaultOptions.includeStyleWithColors
+                  )},
                   implementation: nodePreprocessor,
                 });
                 `
-            )
+            );
 
             // 替换了处理器的标识
 
